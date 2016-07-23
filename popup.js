@@ -1,7 +1,8 @@
-chrome.webRequest.onBeforeRequest.addListener(
-  function(details) {
-    console.log(details);
-    return {cancel : true}; } ;
-  } {urls: ["*://*.google.com/*"]},
-  ["blocking"]);
-);
+
+function iframeLoaded() {
+  console.log("here");
+  var iFrameID = document.getElementById('bingRewards');
+  if (iFrameID) {
+    iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+  }
+}
