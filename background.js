@@ -22,8 +22,8 @@ function getCredits(req) {
 }
 
 function searchBing(details) {
-  console.log("PC Searches: " + searches.pc);
-  console.log("Mobile Searches: " + searches.mobile);
+  // console.log("PC Searches: " + searches.pc);
+  // console.log("Mobile Searches: " + searches.mobile);
   if (searches.pc > 0 || searches.mobile > 0) {
     var searchParams = new URLSearchParams((new
       URL(details.url)).search.slice(1)).get("q");
@@ -45,15 +45,35 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
         }
       }
     }
-    console.log(details);
+    // console.log("On Before Send Headers");
+    // console.log(details);
     return { requestHeaders : details.requestHeaders };
   },
   {urls : ["*://*.bing.com/search?*"]},
   ["blocking", "requestHeaders"]
 );
 
+/* DEBUG stuff
 chrome.webRequest.onCompleted.addListener(
   function(details) {
+    console.log("Completed");
+    console.log(details);
+  },
+  {urls : ["*://*.bing.com/search?*"]}
+);
+
+chrome.webRequest.onErrorOccurred.addListener(
+  function(details) {
+    console.log("Error Occurred");
+    console.log(details);
+  },
+  {urls : ["*://*.bing.com/search?*"]}
+);
+*/
+chrome.webRequest.onBeforeRequest.addListener(
+  function(details) {
+    // console.log("Google Search Completed");
+    // console.log("Details");
     var req = new XMLHttpRequest();
     req.responseType = "document";
     req.addEventListener("load", function() {
