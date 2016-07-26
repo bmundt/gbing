@@ -1,5 +1,6 @@
 # gbing
-Make google searches also search bing, to get bing rewards without using bing.
+<<<<<<< HEAD
+Making google searches also search bing, to get bing rewards without using bing.
 
 # Installation
 
@@ -12,3 +13,6 @@ Make google searches also search bing, to get bing rewards without using bing.
 For some reason, just modifying your search from the google search bar, does
 not trigger a new request from the google web request api, so it doesn't get
 detected, and thus a request won't be sent to bing.
+=======
+Making google searches also search bing
+>>>>>>> origin/master
