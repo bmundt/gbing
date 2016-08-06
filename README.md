@@ -3,7 +3,10 @@
 Making google searches also search bing, to get bing rewards without using bing.
 
 # Installation
+Packaged:
+  Drag the gbing.crx folder into chrome
 
+Source:
 1. In chrome go to chrome://extensions
 2. Check the box in the upper right hand corner labeled "developer mode"
 3. Click the button labeled "Load unpacked extension", browse to the "gbing"
