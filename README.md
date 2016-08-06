@@ -1,5 +1,4 @@
 # gbing
-<<<<<<< HEAD
 Making google searches also search bing, to get bing rewards without using bing.
 
 # Installation
@@ -18,4 +17,3 @@ not trigger a new request from the google web request api, so it doesn't get
 detected, and thus a request won't be sent to bing.
 =======
 Making google searches also search bing
->>>>>>> origin/master
